@@ -1,0 +1,8 @@
+{
+  "name": "crawlerTest",
+  "version": "0.0.0",
+  "description": "crawler",
+  "devDependencies": {
+    "simplecrawler": "~0.3.6"
+  }
+}
