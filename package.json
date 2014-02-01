@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "description": "crawler",
   "dependencies": {
-    "simplecrawler": "~0.3.6"
+    "simplecrawler": "~0.3.6",
+    "di": "0.0.1"
   },
   "devDependencies": {
+    "mocks": "0.0.15",
     "grunt": "~0.4",
     "grunt-jasmine-node-coverage": "0.1.5",
     "grunt-contrib-jshint": "0.6.3",
