@@ -2,7 +2,13 @@
   "name": "crawlerTest",
   "version": "0.0.0",
   "description": "crawler",
-  "devDependencies": {
+  "dependencies": {
     "simplecrawler": "~0.3.6"
+  },
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-jasmine-node-coverage": "0.1.5",
+    "grunt-contrib-jshint": "0.6.3",
+    "grunt-contrib-watch": "0.5.1"
   }
 }
