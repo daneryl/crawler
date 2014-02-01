@@ -1,5 +1,14 @@
 'use strict';
 
-module.exports = function(http){
-  console.log(http);
+module.exports = function(http, Q){
+
+  return function(resource){
+    var deferred = Q.defer();
+    
+    http.get(resource, function(response) {
+      deferred.resolve(response.statusCode);
+    });
+
+    return deferred.promise;
+  };
 };
