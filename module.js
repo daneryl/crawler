@@ -1,7 +1,10 @@
 var crawler_module = {
-  'download': ['factory', require('./src/download')],
+  'download': ['factory', require('./src/download.js')],
+  'directory': ['factory', require('./src/directory.js')],
+  
   'http': ['value', require('http')],
-  'Q': ['value', require('q')]
+  'Q': ['value', require('q')],
+  'fs': ['value', require('fs')]
 };
 
 var di = require('di');
