@@ -18,15 +18,18 @@ sites.forEach(function(site) {
 
   website.on('fetchcomplete', function(resource, buffer, response) {
     process.stdout.write('.');
-    console.log(buffer);
     if(resource.url.match(condition)){
       console.log('');
       console.log(resource.url+' FOUND !');
 
       var image_name = url.parse(resource.url).host + ' - '+ path.basename(resource.url);
       var file = fs.createWriteStream(__dirname+'/downloads/'+image_name);
-      var request = http.get(resource.url, function(response) {
-        response.pipe(file);
+      fs.writeFile(__dirname+'/downloads/'+image_name, buffer, function(err) {
+        if(err) {
+          console.log(err);
+        } else {
+          console.log("The file was saved!");
+        }
       });
     }
   });

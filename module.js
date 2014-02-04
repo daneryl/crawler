@@ -1,6 +1,5 @@
 var crawler_module = {
-  'download': ['factory', require('./src/download.js')],
-  'directory': ['factory', require('./src/directory.js')],
+  'file': ['factory', require('./src/file.js')],
   
   'http': ['value', require('http')],
   'Q': ['value', require('q')],
