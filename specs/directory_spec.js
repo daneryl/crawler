@@ -32,7 +32,7 @@ describe('directory test', function () {
   });
 
   describe('create', function(){
-    beforeEach(function(done){
+    afterEach(function(done){
       fs.exists(__dirname + '/new_dir/', function(exists) {
         if(exists){
           return fs.rmdir(__dirname + '/new_dir/', function() {

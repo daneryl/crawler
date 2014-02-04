@@ -5,7 +5,8 @@ var crawler_module = {
   'http': ['value', require('http')],
   'Q': ['value', require('q')],
   'fs': ['value', require('fs')],
-  'path': ['value', require('path')]
+  'path': ['value', require('path')],
+  'simplecrawler': ['value', require('simplecrawler')]
 };
 
 var di = require('di');

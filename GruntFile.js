@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: ['**/**.js', '!coverage/lcov-report/prettify.js'],
+        files: ['**/**.js', '!coverage/lcov-report/prettify.js', 'node_modules/**'],
         tasks: ['default'],
         options: {
           spawn: true,

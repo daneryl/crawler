@@ -10,14 +10,15 @@ if (!fs.existsSync(__dirname+'/downloads')) {
   fs.mkdirSync(__dirname+'/downloads');
 }
 
-var sites = ['http://www.codebox.es', 'http://www.levelap.com'];
+var sites = ['http://www.codebox.es'];
 var condition = /\.jpg|\.png/;
 
 sites.forEach(function(site) {
   var website = crawler.crawl(site);
 
-  website.on('fetchcomplete', function(resource) {
+  website.on('fetchcomplete', function(resource, buffer, response) {
     process.stdout.write('.');
+    console.log(buffer);
     if(resource.url.match(condition)){
       console.log('');
       console.log(resource.url+' FOUND !');
