@@ -17,7 +17,8 @@ describe('download test', function () {
     it('should create a file with content passed', function(done){
       var destination = __dirname + '/test_downloads/test_file.txt';
       _file(destination).save('test content')
-      .then(function() {
+      .then(function(file) {
+        expect(file.path).toBe(destination);
         fs.readFile(destination, 'utf8', function(err, data) {
           expect(data).toBe('test content');
           done();

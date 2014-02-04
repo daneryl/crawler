@@ -5,6 +5,8 @@ module.exports = function(Q, fs) {
   return function(path) {
 
     return {
+      path: path,
+
       save: function(content) {
         var deferred = Q.defer();
         var _this = this;
