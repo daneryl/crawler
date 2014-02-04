@@ -25,6 +25,15 @@ describe('download test', function () {
       })
       .catch(done);
     });
+
+    it('should reject the promise on error', function(done){
+      var destination = __dirname + '/unexistent/test_file.txt';
+      _file(destination).save('test content')
+      .catch(function(err) {
+        expect(err).toBeDefined();
+        done();
+      });
+    });
   });
 
   describe('file().remove()', function(){
@@ -41,6 +50,15 @@ describe('download test', function () {
         });
       })
       .catch(done);
+    });
+
+    it('should reject the promise on error', function(done){
+      var destination = __dirname + '/unexistent/test_file.txt';
+      _file(destination).remove()
+      .catch(function(error) {
+        expect(error).toBeDefined();
+        done();
+      });
     });
   });
 });

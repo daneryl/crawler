@@ -9,7 +9,10 @@ module.exports = function(Q, fs) {
         var deferred = Q.defer();
         var _this = this;
 
-        fs.writeFile(path, content, function() {
+        fs.writeFile(path, content, function(error) {
+          if(error){
+            deferred.reject(error);
+          }
           deferred.resolve(_this);
         });
 
@@ -20,7 +23,10 @@ module.exports = function(Q, fs) {
         var deferred = Q.defer();
         var _this = this;
 
-        fs.unlink(path, function() {
+        fs.unlink(path, function(error) {
+          if(error){
+            deferred.reject(error);
+          }
           deferred.resolve(_this);
         });
 
