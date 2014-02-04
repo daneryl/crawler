@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "description": "crawler",
   "devDependencies": {
-    "simplecrawler": "~0.3.6"
+    "simplecrawler": "~0.3.6",
+    "underscore": "*",
+    "zerorpc": "*"
   }
 }
