@@ -1,1 +1,4 @@
 zerorpc
+pdfminer==20110515
+python-magic
+chardet
